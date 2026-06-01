@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit Bites | Innovative & Nutritious Snacks</title>
+    <style>
+        /* Base Styles & Theme Colors from Design 1 */
+        :root {
+            --primary: #2e7d32; /* Deep Mango Green */
+            --secondary: #ffb300; /* Bright Mango Yellow */
+            --accent: #7b1fa2; /* Ube Purple */
+            --dark: #263238;
+            --light: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.9), rgba(123, 31, 162, 0.8)), url('https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 140px 20px 80px;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 42px; margin-bottom: 10px; }
+        .hero p { font-size: 18px; opacity: 0.9; }
+
+        /* Product Tab Styling */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tab-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: -30px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .tab-btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            background: #fff;
+            color: var(--dark);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .tab-btn.active {
+            background: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-5px);
+        }
+
+        /* Content Visibility */
+        .content { display: none; animation: fadeIn 0.5s ease; }
+        .content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Nutrition Cards Grid */
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .nutri-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border-top: 5px solid var(--secondary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .nutri-card:hover { transform: translateY(-5px); }
+
+        .nutri-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .nutri-list {
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .nutri-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .nutri-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Tech Highlight Box */
+        .tech-highlight {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .tech-highlight h3 { margin-bottom: 15px; font-size: 24px; color: var(--secondary); }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .tab-btn { padding: 10px 20px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Bit<span>Bites</span></div>
+            <div style="font-size: 12px; color: #888; font-weight: bold;">PRODUCT INTELLIGENCE</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Bite into Information.</h1>
+        <p>Combining Culinary Tradition with Nutritional Science</p>
+    </section>
+
+    <div class="tab-wrapper">
+        <button class="tab-btn active" onclick="showSection('polvoron', this)">Tropical Polvoron</button>
+        <button class="tab-btn" onclick="showSection('chips', this)">Okra Ube Chips</button>
+    </div>
+
+    <div class="section">
+        
+        <div id="polvoron" class="content active">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-size: 32px;">Fruit-Infused Polvoron</h2>
+                <p style="color: #666; max-width: 700px; margin: 10px auto;">Our "chewy center" provides natural vitamins sourced directly from Philippine orchards, hidden within a nostalgic toasted base.</p>
+            </div>
+
+            <div class="nutrition-grid">
+                <div class="nutri-card">
+                    <span class="badge">Antioxidant Rich</span>
+                    <h4>🥭 Mango Center</h4>
+                    <ul class="nutri-list">
+                        <li><strong>Vitamin A:</strong> Supports healthy vision and immune function.</li>
+                        <li><strong>Fiber:</strong> Natural dried fruit chunks aid in digestion.</li>
+                        <li><strong>Beta-Carotene:</strong> Powerful antioxidant for skin health.</li>
+                    </ul>
+                </div>
+
+                <div class="nutri-card">
+                    <span class="badge">Immune Booster</span>
+                    <h4>🍍 Pineapple Center</h4>
+                    <ul class="nutri-list">
+                        <li><strong>Vitamin C:</strong> High concentration for natural energy.</li>
+                        <li><strong>Bromelain:</strong> An enzyme that helps reduce inflammation.</li>
+                        <li><strong>Manganese:</strong> Essential for bone health and metabolism.</li>
+                    </ul>
+                </div>
+
+                <div class="nutri-card">
+                    <span class="badge">Vitality</span>
+                    <h4>🍓 Wild Berry Center</h4>
+                    <ul class="nutri-list">
+                        <li><strong>Anthocyanins:</strong> Heart-health benefits and vibrant color.</li>
+                        <li><strong>Low Glycemic:</strong> Flavor without the heavy sugar spike.</li>
+                        <li><strong>Vitamin K:</strong> Important for bone metabolism.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-highlight">
+                <h3>Innovation: "Nutrient Sealing"</h3>
+                <p>Our <strong>Strategic Molding Process</strong> seals fruit chunks inside the toasted flour base. This protects the fruits from oxidation, keeping vitamins intact and the "chewy" texture fresh for every bite.</p>
+            </div>
+        </div>
+
+        <div id="chips" class="content">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-size: 32px; color: var(--accent);">Okra Ube Chips</h2>
+                <p style="color: #666; max-width: 700px; margin: 10px auto;">Transforming locally-sourced okra into a crispy, vitamin-packed technopreneurship snack.</p>
+            </div>
+
+            <div class="nutrition-grid">
+                <div class="nutri-card" style="border-top-color: var(--accent);">
+                    <span class="badge" style="background: #f3e5f5; color: var(--accent);">Superfood Base</span>
+                    <h4>🌵 The Okra Factor</h4>
+                    <ul class="nutri-list">
+                        <li><strong>High Fiber:</strong> Promotes gut health and satiety.</li>
+                        <li><strong>Folate (B9):</strong> Crucial for brain function and cell growth.</li>
+                        <li><strong>Magnesium:</strong> Helps regulate blood sugar and pressure.</li>
+                    </ul>
+                </div>
+
+                <div class="nutri-card" style="border-top-color: var(--accent);">
+                    <span class="badge" style="background: #f3e5f5; color: var(--accent);">Complex Carb</span>
+                    <h4>🍠 The Ube Coating</h4>
+                    <ul class="nutri-list">
+                        <li><strong>Resistant Starch:</strong> Acts as a prebiotic for gut bacteria.</li>
+                        <li><strong>Vitamin B6:</strong> Helps convert food into cellular energy.</li>
+                        <li><strong>Potassium:</strong> Essential for heart and muscle function.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-highlight" style="background: var(--accent);">
+                <h3 style="color: white;">Food Tech: Vacuum Frying</h3>
+                <p>To preserve these nutrients, we utilize <strong>Vacuum Frying Technology</strong>. This allows okra to become crispy at lower temperatures, keeping the natural green color and vitamins from being lost.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Bit Bites Foods Inc.</strong> | 137 Ligas 1, Bacoor, Cavite</p>
+        <p style="font-size: 12px; margin-top: 10px; opacity: 0.6;">Nutritional Data sourced from DOST-FNRI Standards. &copy; 2026</p>
+    </footer>
+
+    <script>
+        function showSection(id, btn) {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
+
