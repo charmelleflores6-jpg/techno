@@ -244,12 +244,6 @@
             margin-bottom: 1.5rem;
         }
 
-        @media (max-width: 768px) {
-            .editorial-block { grid-template-columns: 1fr; gap: 2rem; }
-            .subtab-header { flex-direction: column; border-radius: 20px; }
-            .hero-banner h1 { font-size: 3rem; }
-        }
-
         /* Premium Minimalist Tables */
         .minimal-table {
             width: 100%;
@@ -277,8 +271,18 @@
             border-bottom: 1px solid var(--border-light);
         }
 
-        .minimal-table td:first-child { border-left: 1px solid var(--border-light); border-top-left-radius: var(--radius-sm); border-bottom-left-radius: var(--radius-sm); font-weight: 700; color: var(--text-dark); }
-        .minimal-table td:last-child { border-right: 1px solid var(--border-light); border-top-right-radius: var(--radius-sm); border-bottom-right-radius: var(--radius-sm); }
+        .minimal-table td:first-child { 
+            border-left: 1px solid var(--border-light); 
+            border-top-left-radius: var(--radius-sm); 
+            border-bottom-left-radius: var(--radius-sm);
+            font-weight: 700; 
+            color: var(--text-dark); 
+        }
+        .minimal-table td:last-child { 
+            border-right: 1px solid var(--border-light);
+            border-top-right-radius: var(--radius-sm); 
+            border-bottom-right-radius: var(--radius-sm); 
+        }
 
         /* Dynamic Visual Timelines */
         .timeline-list {
@@ -319,105 +323,91 @@
             font-size: 0.75rem;
             font-weight: 700;
         }
-        /* Modern Layout & Typography Enhancements */
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--bg-cream);
-    color: var(--text-dark);
-}
 
-/* Section Header styling */
-.section-title {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--text-dark);
-}
+        /* Review Grid Layout */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
 
-/* Review Grid Layout */
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-    padding: 1rem;
-}
+        .review-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(143, 128, 119, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease;
+        }
 
-.review-card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 10px 25px rgba(143, 128, 119, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    transition: transform 0.2s ease;
-}
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
 
-.review-card:hover {
-    transform: translateY(-5px);
-}
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
 
-.reviewer-info {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-}
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #f0ede9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
 
-.reviewer-avatar {
-    width: 40px;
-    height: 40px;
-    background-color: #f0ede9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: var(--text-dark);
-}
+        .stars {
+            color: #ffb800;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
 
-.stars {
-    color: #ffb800;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
+        /* Sleek Nutrition Facts Table */
+        .nutrition-panel {
+            background: #ffffff;
+            border: 2px solid #000000;
+            padding: 1.25rem;
+            font-family: 'Arial', sans-serif;
+            width: 100%;
+            max-width: 320px;
+            margin: 2rem auto;
+            text-align: left;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.05);
+        }
 
-/* Sleek Nutrition Facts Table */
-.nutrition-panel {
-    background: #ffffff;
-    border: 2px solid #000000;
-    padding: 1.25rem;
-    font-family: 'Arial', sans-serif;
-    max-width: 320px;
-    margin: 2rem auto;
-    text-align: left;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.05);
-}
+        .nutrition-title {
+            font-size: 1.75rem;
+            font-weight: 900;
+            border-bottom: 8px solid #000000;
+            line-height: 1;
+            padding-bottom: 0.25rem;
+        }
 
-.nutrition-title {
-    font-size: 1.75rem;
-    font-weight: 900;
-    border-bottom: 8px solid #000000;
-    line-height: 1;
-    padding-bottom: 0.25rem;
-}
+        .nutrition-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #000000;
+            padding: 0.35rem 0;
+            font-size: 0.9rem;
+        }
 
-.nutrition-row {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #000000;
-    padding: 0.35rem 0;
-    font-size: 0.9rem;
-}
+        .nutrition-row.bold {
+            font-weight: bold;
+            border-bottom: 4px solid #000000;
+        }
 
-.nutrition-row.bold {
-    font-weight: bold;
-    border-bottom: 4px solid #000000;
-}
-
-.nutrition-row.thick {
-    border-bottom: 4px solid #000000;
-}
+        .nutrition-row.thick {
+            border-bottom: 4px solid #000000;
+        }
 
         /* Luxury Team Profiling Layout */
         .team-container {
@@ -630,6 +620,101 @@ body {
             text-transform: uppercase;
             margin-top: 8rem;
         }
+
+        /* Custom Dynamic Classes for Layout Switching */
+        .product-flex-wrapper {
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 2rem; 
+            justify-content: center; 
+            align-items: flex-start;
+        }
+        .product-description-block {
+            flex: 1; 
+            min-width: 300px;
+        }
+
+        /* 📱 MEDIA QUERIES FOR COMPREHENSIVE SMARTPHONE POV ADAPTATION */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 4%;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+                padding: 0.3rem;
+            }
+
+            .nav-links a {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            .container {
+                padding: 1rem 1rem 4rem 1rem;
+            }
+
+            .hero-banner {
+                padding: 5rem 1rem;
+            }
+
+            .hero-banner h1 {
+                font-size: 2.8rem;
+            }
+
+            .editorial-block {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .editorial-card {
+                padding: 2rem;
+            }
+
+            .subtab-header {
+                flex-direction: column;
+                border-radius: 20px;
+                gap: 0.25rem;
+                padding: 0.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .subtab-btn {
+                width: 100%;
+                text-align: center;
+                padding: 0.6rem 1rem;
+            }
+
+            /* Product specific text adjustments */
+            .product-flex-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-description-block {
+                width: 100%;
+                text-align: center;
+                min-width: unset;
+            }
+
+            /* Expand tables to avoid layout squishing */
+            .minimal-table {
+                display: block;
+                overflow-x: auto;
+                width: 100%;
+            }
+
+            #pol-bg > div, #ube-bg > div {
+                padding: 2rem !important;
+            }
+            
+            .faq-block h2, .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -656,6 +741,7 @@ body {
                     <p>BitBites bridges the space between quick, mass-produced native powdery confections and premium, high-end desserts. We introduce creative texture profiles into everyday local snacks, highlighting the organic richness of home-grown Philippine produce.</p>
                     <p>Whether it is balancing melt-in-your-mouth toasted flour matrices with real chewy sun-dried fruits or banishing the slimy profile of native okra via slow baking paired with beautiful sweet ube glazes, we design snack bites that inspire and delight.</p>
                 </div>
+           
                 <div class="editorial-card">
                     <h2>System Framework</h2>
                     <p>Our operation runs on a lean, community-driven ecosystem. We secure fresh native ingredients early weekly directly from regional public wet markets to preserve quality and control product costs.</p>
@@ -705,67 +791,64 @@ body {
         </div>
     </div>
 
-
     <div id="polvoron-page" class="page-view">
         <header class="hero-banner" style="background: var(--polvoron-bg);">
             <h1 style="color: #593920;">Tropical Fruits Polvoron</h1>
             <p style="color: #7d6554;">Nostalgic melt-in-your-mouth shortbread base meets real, vibrant premium dried local fruits.</p>
         </header>
         <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
-    
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: flex-start;">
-        
-        <div style="flex: 1; min-width: 300px;">
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">Fruity Fusion Polvoron</h3>
-            <p style="color: var(--text-muted); line-height: 1.6;">
-                A delightful twist on a classic Filipino favorite! Our polvoron combines a rich, buttery toasted flour base with sweet, naturally chewy dried tropical fruit inclusions.
-            </p>
-        </div>
+            <div class="product-flex-wrapper">
+                <div class="product-description-block">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">Fruity Fusion Polvoron</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6;">
+                        A delightful twist on a classic Filipino favorite! Our polvoron combines a rich, buttery toasted flour base with sweet, naturally chewy dried tropical fruit inclusions.
+                    </p>
+                </div>
 
-        <div class="nutrition-panel">
-            <div class="nutrition-title">Nutrition Facts</div>
-            <div class="nutrition-row" style="font-size: 0.8rem; border-bottom: 4px solid #000;">Servings Per Container: 1 box (4-8 pcs)</div>
-            <div class="nutrition-row bold">Amount Per Serving</div>
-            <div class="nutrition-row bold thick" style="font-size: 1.2rem;">Calories <span style="float:right;">140</span></div>
-            <div class="nutrition-row"><strong>Total Fat</strong> 6g <span style="float:right; font-weight:bold;">8%</span></div>
-            <div class="nutrition-row">Saturated Fat 3.5g <span style="float:right; font-weight:bold;">18%</span></div>
-            <div class="nutrition-row"><strong>Sodium</strong> 45mg <span style="float:right; font-weight:bold;">2%</span></div>
-            <div class="nutrition-row"><strong>Total Carbohydrate</strong> 19g <span style="float:right; font-weight:bold;">7%</span></div>
-            <div class="nutrition-row" style="padding-left: 10px;">Dietary Fiber 1g <span style="float:right; font-weight:bold;">4%</span></div>
-            <div class="nutrition-row" style="padding-left: 10px;">Total Sugars 9g</div>
-            <div class="nutrition-row" style="border-bottom: none;"><strong>Protein</strong> 2g</div>
-        </div>
-    </div>
-
-    <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 3rem 0;">
-
-    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; text-align: center;">What Customers Say</h4>
-    <div class="reviews-grid">
-        <div class="review-card">
-            <div class="reviewer-info">
-                <div class="reviewer-avatar">M</div>
-                <div>
-                    <strong style="display:block;">Mae G.</strong>
-                    <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+                <div class="nutrition-panel">
+                    <div class="nutrition-title">Nutrition Facts</div>
+                    <div class="nutrition-row" style="font-size: 0.8rem; border-bottom: 4px solid #000;">Servings Per Container: 1 box (4-8 pcs)</div>
+                    <div class="nutrition-row bold">Amount Per Serving</div>
+                    <div class="nutrition-row bold thick" style="font-size: 1.2rem;">Calories <span style="float:right;">140</span></div>
+                    <div class="nutrition-row"><strong>Total Fat</strong> 6g <span style="float:right; font-weight:bold;">8%</span></div>
+                    <div class="nutrition-row">Saturated Fat 3.5g <span style="float:right; font-weight:bold;">18%</span></div>
+                    <div class="nutrition-row"><strong>Sodium</strong> 45mg <span style="float:right; font-weight:bold;">2%</span></div>
+                    <div class="nutrition-row"><strong>Total Carbohydrate</strong> 19g <span style="float:right; font-weight:bold;">7%</span></div>
+                    <div class="nutrition-row" style="padding-left: 10px;">Dietary Fiber 1g <span style="float:right; font-weight:bold;">4%</span></div>
+                    <div class="nutrition-row" style="padding-left: 10px;">Total Sugars 9g</div>
+                    <div class="nutrition-row" style="border-bottom: none;"><strong>Protein</strong> 2g</div>
                 </div>
             </div>
-            <div class="stars">★★★★★</div>
-            <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"The texture is amazing! The polvoron itself isn't too crumbly, and the chewy bits of dried fruits inside make it so addictive."</p>
-        </div>
 
-        <div class="review-card">
-            <div class="reviewer-info">
-                <div class="reviewer-avatar">J</div>
-                <div>
-                    <strong style="display:block;">Joshua L.</strong>
-                    <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 3rem 0;">
+
+            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; text-align: center;">What Customers Say</h4>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">M</div>
+                        <div>
+                            <strong style="display:block;">Mae G.</strong>
+                            <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"The texture is amazing! The polvoron itself isn't too crumbly, and the chewy bits of dried fruits inside make it so addictive."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">J</div>
+                        <div>
+                            <strong style="display:block;">Joshua L.</strong>
+                            <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"Perfect balance of sweet and buttery. Love the bento packaging options too, great for gifting!"</p>
                 </div>
             </div>
-            <div class="stars">★★★★★</div>
-            <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"Perfect balance of sweet and buttery. Love the bento packaging options too, great for gifting!"</p>
         </div>
-    </div>
-</div>
 
         <div class="container">
             <div class="subtab-header">
@@ -907,67 +990,63 @@ body {
         </div>
     </div>
 
-
     <div id="okraube-page" class="page-view">
         <header class="hero-banner" style="background: var(--ube-bg);">
             <h1 style="color: #492275;">Okra Ube Chips</h1>
             <p style="color: #715291;">Reimagining crisp snacking through a combination of oven-baked nutrition and aromatic purple ube glaze.</p>
         </header>
         <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
-    
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: flex-start;">
-        
-        <div style="flex: 1; min-width: 300px;">
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">Okra-Ube Chips</h3>
-            <p style="color: var(--text-muted); line-height: 1.6;">
-                An innovative snack concept combining the earthly benefits of real okra slices baked with a gorgeous sweet purple ube infusion glaze. Dehydrated perfectly to remove the sliminess completely while retaining a satisfying crunch!
-            </p>
-        </div>
-
-        <div class="nutrition-panel">
-            <div class="nutrition-title">Nutrition Facts</div>
-            <div class="nutrition-row" style="font-size: 0.8rem; border-bottom: 4px solid #000;">Servings Per Container: 1 Retail Bag</div>
-            <div class="nutrition-row bold">Amount Per Serving</div>
-            <div class="nutrition-row bold thick" style="font-size: 1.2rem;">Calories <span style="float:right;">110</span></div>
-            <div class="nutrition-row"><strong>Total Fat</strong> 3g <span style="float:right; font-weight:bold;">4%</span></div>
-            <div class="nutrition-row">Saturated Fat 0.5g <span style="float:right; font-weight:bold;">3%</span></div>
-            <div class="nutrition-row"><strong>Sodium</strong> 85mg <span style="float:right; font-weight:bold;">4%</span></div>
-            <div class="nutrition-row"><strong>Total Carbohydrate</strong> 18g <span style="float:right; font-weight:bold;">6%</span></div>
-            <div class="nutrition-row" style="padding-left: 10px;">Dietary Fiber 4g <span style="float:right; font-weight:bold;">14%</span></div>
-            <div class="nutrition-row" style="padding-left: 10px;">Total Sugars 5g</div>
-            <div class="nutrition-row" style="border-bottom: none;"><strong>Protein</strong> 3g</div>
-        </div>
-    </div>
-
-    <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 3rem 0;">
-
-    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; text-align: center;">What Customers Say</h4>
-    <div class="reviews-grid">
-        <div class="review-card">
-            <div class="reviewer-info">
-                <div class="reviewer-avatar">K</div>
-                <div>
-                    <strong style="display:block;">Kristine P.</strong>
-                    <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+            <div class="product-flex-wrapper">
+                <div class="product-description-block">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">Okra-Ube Chips</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+                        An innovative snack concept combining the earthly benefits of real okra slices baked with a gorgeous sweet purple ube infusion glaze. Dehydrated perfectly to remove the sliminess completely while retaining a satisfying crunch!
+                    </p>
+                </div>
+                <div class="nutrition-panel">
+                    <div class="nutrition-title">Nutrition Facts</div>
+                    <div class="nutrition-row" style="font-size: 0.8rem; border-bottom: 4px solid #000;">Servings Per Container: 1 Retail Bag</div>
+                    <div class="nutrition-row bold">Amount Per Serving</div>
+                    <div class="nutrition-row bold thick" style="font-size: 1.2rem;">Calories <span style="float:right;">110</span></div>
+                    <div class="nutrition-row"><strong>Total Fat</strong> 3g <span style="float:right; font-weight:bold;">4%</span></div>
+                    <div class="nutrition-row">Saturated Fat 0.5g <span style="float:right; font-weight:bold;">3%</span></div>
+                    <div class="nutrition-row"><strong>Sodium</strong> 85mg <span style="float:right; font-weight:bold;">4%</span></div>
+                    <div class="nutrition-row"><strong>Total Carbohydrate</strong> 18g <span style="float:right; font-weight:bold;">6%</span></div>
+                    <div class="nutrition-row" style="padding-left: 10px;">Dietary Fiber 4g <span style="float:right; font-weight:bold;">14%</span></div>
+                    <div class="nutrition-row" style="padding-left: 10px;">Total Sugars 5g</div>
+                    <div class="nutrition-row" style="border-bottom: none;"><strong>Protein</strong> 3g</div>
                 </div>
             </div>
-            <div class="stars">★★★★★</div>
-            <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"I was skeptical about okra chips, but these are completely non-slimy and super crunchy! The sweet ube glaze goes surprisingly well with it."</p>
-        </div>
 
-        <div class="review-card">
-            <div class="reviewer-info">
-                <div class="reviewer-avatar">A</div>
-                <div>
-                    <strong style="display:block;">Angelo D.</strong>
-                    <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 3rem 0;">
+
+            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; text-align: center;">What Customers Say</h4>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">K</div>
+                        <div>
+                            <strong style="display:block;">Kristine P.</strong>
+                            <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"I was anxious about trying okra crisps, but the standard slime texture is gone completely! Sweet ube combinations wrap up the flavor excellently."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">A</div>
+                        <div>
+                            <strong style="display:block;">Angelo D.</strong>
+                            <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"A highly refreshing look into technical modern food innovation. It functions perfectly as an afternoon energy boost crisp."</p>
                 </div>
             </div>
-            <div class="stars">★★★★☆</div>
-            <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"A really cool technopreneurship concept. Very healthy option when you need an afternoon study snack."</p>
         </div>
-    </div>
-</div>
 
         <div class="container">
             <div class="subtab-header">
@@ -979,53 +1058,66 @@ body {
 
             <div id="ube-bg" class="subtab-content active-content">
                 <div style="max-width: 850px; margin: 0 auto; background: #fff; padding: 4.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); border: 1px solid var(--border-light);">
-                    <p style="font-size: 1.3rem; font-weight: 700; color: var(--ube-accent); margin-bottom: 2rem; text-align: center; font-style: italic; font-family: 'Playfair Display', serif;">"Transforming texture profiles through innovative food design."</p>
-                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; text-align: justify; font-size: 1.05rem;">Okra Ube Chips was established as part of a product development and business feasibility study aimed at creating an innovative and healthier snack alternative. The idea originated from the goal of transforming okra—commonly known for its slimy texture—into a crispy and enjoyable snack by using an oven-baking process and combining it with the popular flavor of ube.</p>
-                    <p style="color: var(--text-muted); text-align: justify; font-size: 1.05rem;">The product was developed through research, experimentation, and innovation to achieve a balance between taste, texture, and nutrition. The baking process helps remove moisture and eliminate the slimy characteristic of okra, resulting in a crunchy chip-like texture that is more appealing to consumers. Through this approach, Okra Ube Chips promotes healthier snacking in a simple, creative, and modern way while showcasing Filipino-inspired flavors.</p>
+                    <p style="font-size: 1.3rem; font-weight: 700; color: var(--ube-accent); margin-bottom: 2rem; text-align: center; font-style: italic; font-family: 'Playfair Display', serif;">"Transforming native nutritious greens into an irresistible sweet crisp adventure."</p>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; text-align: justify; font-size: 1.05rem;">Okra Ube Chips were envisioned as a bold entry into the functional snack market, aiming to completely re-engineer public perception of a highly nutritious local vegetable. While raw native okra possesses massive health benefits, its standard slimy mucilage properties frequently deter casual snack lovers.</p>
+                    <p style="color: var(--text-muted); text-align: justify; font-size: 1.05rem;">Our snack lab targeted this problem directly by introducing technical precision processing. Dehydrated slowly, the pod's wet traits collapse entirely to produce an incredibly light, crunchy chip base. Coated flawlessly with an aromatic sweet purple ube infusion layer, the final creation delivers a vibrant, colorful, and completely non-slimy snack alternative that makes vegetable chips incredibly luxury-driven and delicious.</p>
                 </div>
             </div>
 
             <div id="ube-process" class="subtab-content">
                 <div class="editorial-block">
                     <div>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Supply Chain</h2>
-                        <div class="timeline-list">
-                            <div class="timeline-node" style="border-left: 4px solid var(--ube-accent);">
-                                <strong style="font-size: 1rem; text-transform: uppercase; color: var(--ube-accent);">Sourcing & Procurement</strong>
-                                <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.4rem;">Every Monday morning, we purchase our fresh okra pods directly from the nearby Kawit Public Market to secure wholesale prices. Companion ingredients, like honey and ube coating, are bought in bulk from local baking supply stores in Cavite to keep material costs minimal.</p>
-                            </div>
-                            <div class="timeline-node" style="border-left: 4px solid var(--ube-accent);">
-                                <strong style="font-size: 1rem; text-transform: uppercase; color: var(--ube-accent);">Inventory Storage</strong>
-                                <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.4rem;">Raw materials are transported immediately to our home facility. The fresh okra is stored in the kitchen refrigerator's crisper drawer to maintain optimal freshness, while dry items (honey, ube powder, and food-grade packaging pouches) are organized neatly in a dry storage cabinet.</p>
-                            </div>
-                            <div class="timeline-node" style="border-left: 4px solid var(--ube-accent);">
-                                <strong style="font-size: 1rem; text-transform: uppercase; color: var(--ube-accent);">Processing & Production</strong>
-                                <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.4rem;">Production is carried out in small batches by the two of us rotating shifts after class. We wash and slice the okra into 5mm rounds in our Kitchen Area, apply the honey-ube blend, and bake it for 2 hours. Once cooled on our Dining Table Area, the crispy chips are weighed into 30g portions and heat-sealed.</p>
-                            </div>
-                            <div class="timeline-node" style="border-left: 4px solid var(--ube-accent);">
-                                <strong style="font-size: 1rem; text-transform: uppercase; color: var(--ube-accent);">Distribution & Delivery</strong>
-                                <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.4rem;">Finished pouches are placed into distribution boxes. Because our target school canteens and neighborhood sari-sari stores are located right within the immediate Toclong area, we deliver the orders directly on foot or via a short tricycle ride to eliminate expensive courier fees.</p>
-                            </div>
-                        </div>
+                        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Sourcing Matrices</h2>
+                        <table class="minimal-table">
+                            <thead>
+                                <tr>
+                                    <th>Ingredient Base</th>
+                                    <th>Origin Hub</th>
+                                    <th>Volume Allocations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Native Okra Pods</td>
+                                    <td>Regional Wet Market</td>
+                                    <td>4kg Fresh Green Okra Stocks</td>
+                                </tr>
+                                <tr>
+                                    <td>Ube Glaze Base</td>
+                                    <td>Local Distribution Center</td>
+                                    <td>Aromatic Purple Yam Paste, Sugar Matrices</td>
+                                </tr>
+                                <tr>
+                                    <td>Packaging Setup</td>
+                                    <td>E-Commerce Hubs</td>
+                                    <td>150 Minimalist Resealable Pouches, Custom Branded Labels</td>
+                                </tr>
+                                <tr>
+                                    <td>Lab Utilities</td>
+                                    <td>Kitchen Facility</td>
+                                    <td>Low-Heat Oven Arrays, Stainless Steel Slicers</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div>
                         <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Operating Process</h2>
                         <div class="timeline-list">
                             <div class="timeline-node">
-                                <div class="node-meta"><span>Preparation Stage</span><span class="node-duration" style="background:rgba(108,66,156,0.12); color:var(--ube-accent);">20 Mins</span></div>
-                                <p style="font-size: 0.95rem; color: var(--text-muted);">Wash and slice fresh okra pods cleanly; prepare special ube flavor matrices and alternative companion items.</p>
+                                <div class="node-meta"><span>1. Precision Pod Slicing</span><span class="node-duration" style="background:rgba(108,66,156,0.15); color:#542f80;">20 Mins</span></div>
+                                <p style="font-size: 0.95rem; color: var(--text-muted);">Freshly cleaned native okra pieces are uniformly cross-cut into precise 5mm cross-sections to ensure uniform drying properties across the entire batch.</p>
                             </div>
                             <div class="timeline-node">
-                                <div class="node-meta"><span>Mixing Stage</span><span class="node-duration" style="background:rgba(108,66,156,0.12); color:var(--ube-accent);">30 Mins</span></div>
-                                <p style="font-size: 0.95rem; color: var(--text-muted);">Combine the sliced okra rings meticulously with local honey, ube flavor blends, and uniform coating layers.</p>
+                                <div class="node-meta"><span>2. Oven Dehydration Loop</span><span class="node-duration" style="background:rgba(108,66,156,0.15); color:#542f80;">2.0 Hours</span></div>
+                                <p style="font-size: 0.95rem; color: var(--text-muted);">Slices undergo a low-and-slow baking procedure to gently drive out internal water content, totally collapsing the slimy mucilage structure into a perfectly crisp base.</p>
                             </div>
                             <div class="timeline-node">
-                                <div class="node-meta"><span>Slow Baking Control</span><span class="node-duration" style="background:rgba(108,66,156,0.12); color:var(--ube-accent);">2 Hours</span></div>
-                                <p style="font-size: 0.95rem; color: var(--text-muted);">Arrange layers systematically onto sheet trays and bake inside the oven until internal moisture leaves, producing a crispy profile snap.</p>
+                                <div class="node-meta"><span>3. Ube Glaze Injection</span><span class="node-duration" style="background:rgba(108,66,156,0.15); color:#542f80;">25 Mins</span></div>
+                                <p style="font-size: 0.95rem; color: var(--text-muted);">The dehydrated crunchy pods are gently rolled and enrobed within an artisanal purple yam mixture glaze, balancing earthy notes with smooth sweetness.</p>
                             </div>
                             <div class="timeline-node">
-                                <div class="node-meta"><span>Packaging Run</span><span class="node-duration" style="background:rgba(108,66,156,0.12); color:var(--ube-accent);">1 Min</span></div>
-                                <p style="font-size: 0.95rem; color: var(--text-muted);">Cool down chips at dining table stations and package them cleanly into designated 30g labeled retail storage pouches.</p>
+                                <div class="node-meta"><span>4. Final Crisp Set</span><span class="node-duration" style="background:rgba(108,66,156,0.15); color:#542f80;">15 Mins</span></div>
+                                <p style="font-size: 0.95rem; color: var(--text-muted);">Glazed items run through a quick secondary baking wave to permanently lock the aromatic sweet shell onto each chip surface, ensuring clean handling and long shelf-life.</p>
                             </div>
                         </div>
                     </div>
@@ -1035,13 +1127,18 @@ body {
             <div id="ube-team" class="subtab-content">
                 <div class="team-container">
                     <div class="team-profile">
-                        <div class="team-initials" style="background: linear-gradient(135deg, var(--ube-accent), #45246b);">JA</div>
-                        <h3>Joshua Alon</h3>
+                        <div class="team-initials" style="background: linear-gradient(135deg, #6c429c, #422266);">JV</div>
+                        <h3>Jean Aliane Verzosa</h3>
                         <p>General Manager</p>
                     </div>
                     <div class="team-profile">
-                        <div class="team-initials" style="background: linear-gradient(135deg, var(--ube-accent), #45246b);">JL</div>
-                        <h3>John Vincent Laroco</h3>
+                        <div class="team-initials" style="background: linear-gradient(135deg, #6c429c, #422266);">MF</div>
+                        <h3>Mary Charmelle S. Flores</h3>
+                        <p>Operations Manager</p>
+                    </div>
+                    <div class="team-profile">
+                        <div class="team-initials" style="background: linear-gradient(135deg, #6c429c, #422266);">NC</div>
+                        <h3>Niccael G. Carpio</h3>
                         <p>Marketing & Sales Lead</p>
                     </div>
                 </div>
@@ -1051,14 +1148,13 @@ body {
                 <div class="menu-visuals">
                     <img class="menu-photo" src="UbeOkraProduct.jpg" alt="Minimalist Okra Ube Chip Display">
                 </div>
-                <div style="max-width: 460px; margin: 0 auto;">
-                    <div class="menu-card" style="border-top: 6px solid var(--ube-accent); text-align: center;">
+                <div class="menu-deck" style="max-width: 440px; margin: 0 auto;">
+                    <div class="menu-card" style="border-top: 6px solid var(--ube-accent);">
                         <div>
-                            <h3 style="color: var(--ube-accent); font-size: 1.6rem; margin-bottom: 0.4rem;">Okra-Ube Chips</h3>
-                            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 2rem;">Net Wt. 25 Grams</span>
-                            <p>An innovative, healthy alternative snack concept turning organic public market okra pods into a crispy chip texture snap wrapped in aromatic purple ube glaze layers.</p>
+                            <h3>Sweet Purple Glaze Crisps</h3>
+                            <p>Slow-baked crisp okra layers complete with rich local ube aromatic coverage patterns. Zero slime, maximum crunch, and nutrient-packed goodness.</p>
                         </div>
-                        <div class="menu-price" style="background: var(--ube-accent); font-size: 1.2rem; margin-top: 1rem;">₱30.00</div>
+                        <div class="menu-price" style="background: var(--ube-accent);">₱15.00 bag / ₱55.00 box of 4</div>
                     </div>
                 </div>
             </div>
@@ -1066,33 +1162,32 @@ body {
     </div>
 
     <footer>
-        <p>&copy; 2026 BitBites Labs Inc. | Purveyors of Fine Filipino Snack Innovations.</p>
+        &copy; 2026 BitBites Snack Labs. All Rights Reserved.
     </footer>
 
     <script>
-        // Root page switching navigation handler
+        // Tab Page switcher core routing engine
         function switchPage(pageId) {
-            const pages = document.querySelectorAll('.page-view');
-            pages.forEach(p => p.classList.remove('active-view'));
+            const allPages = document.querySelectorAll('.page-view');
+            allPages.forEach(p => p.classList.remove('active-view'));
 
             const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => link.classList.remove('active-page'));
+            navLinks.forEach(l => l.classList.remove('active-page'));
 
             document.getElementById(pageId).classList.add('active-view');
-
+            
             if(pageId === 'landing-page') document.getElementById('lnk-landing').classList.add('active-page');
             if(pageId === 'polvoron-page') document.getElementById('lnk-polvoron').classList.add('active-page');
             if(pageId === 'okraube-page') document.getElementById('lnk-okraube').classList.add('active-page');
-
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Subtab controller inside product pages
+        // Horizontal Segment Subtab control center
         function switchSubTab(evt, contentId) {
             const container = evt.currentTarget.closest('.container');
-            
-            const currentContents = container.querySelectorAll('.subtab-content');
-            currentContents.forEach(c => c.classList.remove('active-content'));
+            const currentContent = container.querySelectorAll('.subtab-content');
+            currentContent.forEach(c => c.classList.remove('active-content'));
 
             const currentButtons = container.querySelectorAll('.subtab-btn');
             currentButtons.forEach(b => b.classList.remove('active-tab'));
@@ -1105,21 +1200,16 @@ body {
         function toggleAccordion(headerElement) {
             const accordionItem = headerElement.parentElement;
             const contentContainer = accordionItem.querySelector('.accordion-content');
-            
-            // Check if this specific card wrapper is already open
             const isOpen = accordionItem.classList.contains('active-accordion');
             
-            // First close any open accordion items on the page to stay clean
             const allItems = document.querySelectorAll('.accordion-item');
             allItems.forEach(item => {
                 item.classList.remove('active-accordion');
                 item.querySelector('.accordion-content').style.maxHeight = null;
             });
             
-            // If it wasn't open, toggle it down smoothly
             if (!isOpen) {
                 accordionItem.classList.add('active-accordion');
-                // Calculate actual dynamic text element boundaries for flawless height allocation
                 contentContainer.style.maxHeight = contentContainer.scrollHeight + "px";
             }
         }
