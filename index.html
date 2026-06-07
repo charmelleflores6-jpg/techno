@@ -319,6 +319,105 @@
             font-size: 0.75rem;
             font-weight: 700;
         }
+        /* Modern Layout & Typography Enhancements */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+}
+
+/* Section Header styling */
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+/* Review Grid Layout */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.review-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(143, 128, 119, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #f0ede9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.stars {
+    color: #ffb800;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Sleek Nutrition Facts Table */
+.nutrition-panel {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 1.25rem;
+    font-family: 'Arial', sans-serif;
+    max-width: 320px;
+    margin: 2rem auto;
+    text-align: left;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.05);
+}
+
+.nutrition-title {
+    font-size: 1.75rem;
+    font-weight: 900;
+    border-bottom: 8px solid #000000;
+    line-height: 1;
+    padding-bottom: 0.25rem;
+}
+
+.nutrition-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000000;
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+}
+
+.nutrition-row.bold {
+    font-weight: bold;
+    border-bottom: 4px solid #000000;
+}
+
+.nutrition-row.thick {
+    border-bottom: 4px solid #000000;
+}
 
         /* Luxury Team Profiling Layout */
         .team-container {
@@ -612,6 +711,61 @@
             <h1 style="color: #593920;">Tropical Fruits Polvoron</h1>
             <p style="color: #7d6554;">Nostalgic melt-in-your-mouth shortbread base meets real, vibrant premium dried local fruits.</p>
         </header>
+        <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: flex-start;">
+        
+        <div style="flex: 1; min-width: 300px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">Fruity Fusion Polvoron</h3>
+            <p style="color: var(--text-muted); line-height: 1.6;">
+                A delightful twist on a classic Filipino favorite! Our polvoron combines a rich, buttery toasted flour base with sweet, naturally chewy dried tropical fruit inclusions.
+            </p>
+        </div>
+
+        <div class="nutrition-panel">
+            <div class="nutrition-title">Nutrition Facts</div>
+            <div class="nutrition-row" style="font-size: 0.8rem; border-bottom: 4px solid #000;">Servings Per Container: 1 box (4-8 pcs)</div>
+            <div class="nutrition-row bold">Amount Per Serving</div>
+            <div class="nutrition-row bold thick" style="font-size: 1.2rem;">Calories <span style="float:right;">140</span></div>
+            <div class="nutrition-row"><strong>Total Fat</strong> 6g <span style="float:right; font-weight:bold;">8%</span></div>
+            <div class="nutrition-row">Saturated Fat 3.5g <span style="float:right; font-weight:bold;">18%</span></div>
+            <div class="nutrition-row"><strong>Sodium</strong> 45mg <span style="float:right; font-weight:bold;">2%</span></div>
+            <div class="nutrition-row"><strong>Total Carbohydrate</strong> 19g <span style="float:right; font-weight:bold;">7%</span></div>
+            <div class="nutrition-row" style="padding-left: 10px;">Dietary Fiber 1g <span style="float:right; font-weight:bold;">4%</span></div>
+            <div class="nutrition-row" style="padding-left: 10px;">Total Sugars 9g</div>
+            <div class="nutrition-row" style="border-bottom: none;"><strong>Protein</strong> 2g</div>
+        </div>
+    </div>
+
+    <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 3rem 0;">
+
+    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; text-align: center;">What Customers Say</h4>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">M</div>
+                <div>
+                    <strong style="display:block;">Mae G.</strong>
+                    <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"The texture is amazing! The polvoron itself isn't too crumbly, and the chewy bits of dried fruits inside make it so addictive."</p>
+        </div>
+
+        <div class="review-card">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">J</div>
+                <div>
+                    <strong style="display:block;">Joshua L.</strong>
+                    <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"Perfect balance of sweet and buttery. Love the bento packaging options too, great for gifting!"</p>
+        </div>
+    </div>
+</div>
 
         <div class="container">
             <div class="subtab-header">
@@ -759,6 +913,61 @@
             <h1 style="color: #492275;">Okra Ube Chips</h1>
             <p style="color: #715291;">Reimagining crisp snacking through a combination of oven-baked nutrition and aromatic purple ube glaze.</p>
         </header>
+        <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: flex-start;">
+        
+        <div style="flex: 1; min-width: 300px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">Okra-Ube Chips</h3>
+            <p style="color: var(--text-muted); line-height: 1.6;">
+                An innovative snack concept combining the earthly benefits of real okra slices baked with a gorgeous sweet purple ube infusion glaze. Dehydrated perfectly to remove the sliminess completely while retaining a satisfying crunch!
+            </p>
+        </div>
+
+        <div class="nutrition-panel">
+            <div class="nutrition-title">Nutrition Facts</div>
+            <div class="nutrition-row" style="font-size: 0.8rem; border-bottom: 4px solid #000;">Servings Per Container: 1 Retail Bag</div>
+            <div class="nutrition-row bold">Amount Per Serving</div>
+            <div class="nutrition-row bold thick" style="font-size: 1.2rem;">Calories <span style="float:right;">110</span></div>
+            <div class="nutrition-row"><strong>Total Fat</strong> 3g <span style="float:right; font-weight:bold;">4%</span></div>
+            <div class="nutrition-row">Saturated Fat 0.5g <span style="float:right; font-weight:bold;">3%</span></div>
+            <div class="nutrition-row"><strong>Sodium</strong> 85mg <span style="float:right; font-weight:bold;">4%</span></div>
+            <div class="nutrition-row"><strong>Total Carbohydrate</strong> 18g <span style="float:right; font-weight:bold;">6%</span></div>
+            <div class="nutrition-row" style="padding-left: 10px;">Dietary Fiber 4g <span style="float:right; font-weight:bold;">14%</span></div>
+            <div class="nutrition-row" style="padding-left: 10px;">Total Sugars 5g</div>
+            <div class="nutrition-row" style="border-bottom: none;"><strong>Protein</strong> 3g</div>
+        </div>
+    </div>
+
+    <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 3rem 0;">
+
+    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; text-align: center;">What Customers Say</h4>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">K</div>
+                <div>
+                    <strong style="display:block;">Kristine P.</strong>
+                    <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"I was skeptical about okra chips, but these are completely non-slimy and super crunchy! The sweet ube glaze goes surprisingly well with it."</p>
+        </div>
+
+        <div class="review-card">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">A</div>
+                <div>
+                    <strong style="display:block;">Angelo D.</strong>
+                    <span style="font-size: 0.8rem; color: gray;">Verified Buyer</span>
+                </div>
+            </div>
+            <div class="stars">★★★★☆</div>
+            <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.4;">"A really cool technopreneurship concept. Very healthy option when you need an afternoon study snack."</p>
+        </div>
+    </div>
+</div>
 
         <div class="container">
             <div class="subtab-header">
